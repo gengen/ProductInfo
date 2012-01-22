@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<resources>  
+  
+<string-array name="entries">  
+ <item>Amazonを優先して検索する</item>
+ <item>Yahooを優先して検索する</item>  
+ </string-array>  
+  
+<string-array name="entryvalues">
+ <item>1</item>  
+ <item>2</item>  
+ </string-array>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+      <PreferenceCategory android:title="@string/option_pref">   
+    	<ListPreference 
+    		android:key="@string/search_priority"
+			android:title="@string/search_priority_title"   
+    		android:dialogTitle="@string/dialog_search_priority_title"
+			android:entries="@array/entries"
+			android:summary="@string/search_priority_summary"
+			android:entryValues="@array/entryvalues" >
+		</ListPreference>
+	</PreferenceCategory>   
+</PreferenceScreen>

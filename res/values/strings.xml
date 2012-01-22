@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">口コミくん</string>
+
+<string name="pi_barcode">認識範囲内にバーコードを写してください</string>
+<string name="pi_finish">アプリの終了</string>
+<string name="pi_finish_confirm">アプリを終了しますか？</string>
+<string name="pi_ok">はい</string>
+<string name="pi_ng">いいえ</string>
+<string name="pi_read">読込み中...</string>
+<string name="pi_analyze">情報取得中...</string>
+
+<string name="option_pref">設定</string>
+<string name="search_priority">search_priority</string>
+<string name="search_priority_title">優先設定</string>
+<string name="dialog_search_priority_title">優先設定</string>
+<string name="search_priority_summary">優先して検索する商品を選択する</string>
+<string name="search_priority_item">Yahooを優先して検索する</string>
+<string name="search_priority_book">Amazonを優先して検索する</string>
+
+<string name="cp_not_supported_title">通知</string>
+<string name="cp_not_supported">このバーコードのフォーマットには未対応です</string>
+
+<string name="pr_notfound_title">確認</string>
+<string name="pr_notfound">Yahooではレビューが見つかりませんでした。Amazonを検索しますか？</string>
+<string name="pr_review_notfound">Yahooではレビューが見つかりませんでした</string>
+<string name="pr_nwerror_title">エラー</string>
+<string name="pr_nwerror">ネットワークに接続できませんでした</string>
+<string name="pr_notify">通知</string>
+<string name="pr_page_notfound">Amazonではこの商品のページが見つかりませんでした</string>
+<string name="pr_review_page_notfound">Amazonではこの商品のページが見つかりませんでした。Yahooを検索しますか？</string>
+<string name="pr_detail">商品の詳細を見る</string>
+<string name="pr_search_other">Amazonのレビューを見る</string>
+<string name="pr_search_yahoo">Yahooのレビューを見る</string>
+</resources>
