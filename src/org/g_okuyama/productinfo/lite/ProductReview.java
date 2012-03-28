@@ -15,7 +15,7 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
-import jp.co.nobot.libAdMaker.libAdMaker;
+import mediba.ad.sdk.android.openx.MasAdView;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -54,6 +54,9 @@ public class ProductReview extends FragmentActivity {
   	private boolean mFound = false;
 	private boolean mUnknownFlag = false;
 	private boolean mFromAmazon = false;
+	
+	//for mediba ab
+	private static MasAdView mAd = null;
 
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -123,7 +126,8 @@ public class ProductReview extends FragmentActivity {
                 startActivityForResult(intent, REQUEST_CODE);
             }
         });
-
+        
+        mAd = (MasAdView)findViewById(R.id.adview);
     }
     
     private void searchProductInfo(){
@@ -446,19 +450,10 @@ public class ProductReview extends FragmentActivity {
 
             textDetail.append(System.getProperty("line.separator"));
             textDetail.append(ProductReview.sReviewData[getShownIndex()]);
-
-            libAdMaker AdMaker = (libAdMaker)getActivity().findViewById(R.id.admakerview);
-            AdMaker.setActivity(getActivity());
-            AdMaker.siteId = "1401";
-            AdMaker.zoneId = "3455";
-            AdMaker.setUrl("http://images.ad-maker.info/apps/zi673ynfzqfn.html");
-            AdMaker.setBackgroundColor(Color.TRANSPARENT);
-            /*
-            LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams)AdMaker.getLayoutParams();
-            lp.gravity = android.view.Gravity.CENTER_HORIZONTAL;
-            AdMaker.setLayoutParams(lp);
-            */
-            AdMaker.start();
+            
+            mAd.setAuid("112069");
+            mAd.start();
+            
             return scroller;
         }
     }

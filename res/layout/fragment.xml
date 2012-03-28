@@ -81,21 +81,16 @@
 			android:layout_weight="1"
 			/>
 
-		<FrameLayout
-			android:id="@+id/ad_frame"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:orientation="horizontal"
-			android:gravity="center"
-			>
-			<jp.co.nobot.libAdMaker.libAdMaker
-				android:id="@+id/admakerview"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:scrollbars="none"
-				android:layout_gravity="center"
-			/>
-		</FrameLayout>
+<RelativeLayout
+    android:id="@+id/adcontainer"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="false">
+    <mediba.ad.sdk.android.openx.MasAdView
+        android:id="@+id/adview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
 	</LinearLayout>
 		
 </LinearLayout>

@@ -4,7 +4,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.StringReader;
 
-import jp.co.nobot.libAdMaker.libAdMaker;
+import mediba.ad.sdk.android.openx.MasAdView;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
@@ -37,6 +37,9 @@ public class WebReview extends Activity {
 	String mReviewURL = null;
 	private boolean mUnknownFlag = false;
 	private boolean mErrFlag = false;
+	
+	//for mediba ab
+	private MasAdView mAd = null;
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -224,13 +227,9 @@ public class WebReview extends Activity {
             }
         });
         
-        libAdMaker AdMaker = (libAdMaker)findViewById(R.id.admakerview);
-        AdMaker.setActivity(this);
-        AdMaker.siteId = "1401";
-        AdMaker.zoneId = "3455";
-        AdMaker.setUrl("http://images.ad-maker.info/apps/zi673ynfzqfn.html");
-        AdMaker.setBackgroundColor(Color.TRANSPARENT);
-        AdMaker.start();
+        mAd = (MasAdView)findViewById(R.id.adview);
+        mAd.setAuid("112069");
+        mAd.start();
         
         WebView view = (WebView)findViewById(R.id.review);
         view.setWebViewClient(new CustomWebViewClient());

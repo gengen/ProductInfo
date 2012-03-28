@@ -28,6 +28,7 @@
 				android:layout_width="0pt"
 				android:layout_height="match_parent"
 				android:layout_weight="4"
+				android:orientation="horizontal"
 		>
 			
 		<Button
@@ -52,19 +53,18 @@
 			android:layout_margin="5px"
 		/>
 		</LinearLayout>
+				
+<RelativeLayout
+    android:id="@+id/adcontainer"
+    android:layout_width="0pt"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="false"
+	android:layout_weight="6">
+    <mediba.ad.sdk.android.openx.MasAdView
+        android:id="@+id/adview"
+        android:layout_width="320sp"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
 
-		<LinearLayout
-				android:layout_width="0pt"
-				android:layout_height="match_parent"
-				android:layout_weight="6"
-		>
-	    <jp.co.nobot.libAdMaker.libAdMaker
-			android:id="@+id/admakerview"
-			android:layout_width="0pt"
-			android:layout_height="fill_parent"
-			android:layout_weight="1"
-			android:scrollbars="none"
-		/>
-		</LinearLayout>
-	</LinearLayout>
+</LinearLayout>
 </LinearLayout>
